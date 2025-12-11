@@ -55,6 +55,17 @@ platforms:
   # - deviceName: Samsung Galaxy S22 Ultra
   #   browserName: chrome # Try 'samsung' for Samsung browser
   #   osVersion: 12.0
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-chromium
+    browserVersion: 141.0
+    playwrightConfigOptions:      
+      setup:
+        - name: accountD      
+          testMatch: '**/*confirm-store-test.spec.js'  
+      use:
+        trace: 'on'
+
     
 # =======================
 # Parallels per Platform
