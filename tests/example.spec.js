@@ -1,5 +1,6 @@
 // @ts-check
-import { test, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
+import { test } from './test-fixtures';
 
 test.describe('Playwright Demo Tests', () => {
 

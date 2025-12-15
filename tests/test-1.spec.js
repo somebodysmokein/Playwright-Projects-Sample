@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
+import { test } from './test-fixtures';
 
 test('test libby app', async ({ page }) => {
   await page.goto('https://libbyapp.com/interview/welcome#doYouHaveACard');

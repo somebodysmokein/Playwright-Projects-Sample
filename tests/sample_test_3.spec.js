@@ -1,4 +1,5 @@
-import  {test, expect } from "@playwright/test";
+import  {expect } from "@playwright/test";
+import test from './test-fixtures.js';
 import fs from 'fs/promises';
 import path from 'path';
 
