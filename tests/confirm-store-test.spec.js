@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
+  await page.viewportSize({ width: 1920, height: 1080 });
   await page.goto('https://web-v3-uat.7now.com/home');
   await page.getByRole('button', { name: 'Open Add Address' }).click();
   await page.getByRole('button', { name: 'Pickup' }).click();

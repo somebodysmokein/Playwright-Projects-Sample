@@ -34,14 +34,20 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+     trace: 'on',
+     /* Increase default viewport for all projects */
+     viewport: { width: 1920, height: 1080 },
+     /* Pass browser launch args to set the native window size for headed Chromium/Chrome */
+     launchOptions: {
+       args: ['--window-size=1920,1080']
+     },
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'accountA',
-      use: { ...devices['Desktop Chrome']},
+      use: { ...devices['Desktop Chrome'], launchOptions: { args: ['--window-size=1920,1080'] }, headless: false },
       testMatch: ['tests/sample_test_2.spec.js']
     },
 
@@ -59,8 +65,13 @@ export default defineConfig({
 
     {
       name: 'accountD',
-      use: { ...devices['Desktop Safari'] , trace: 'on', headless: false },
+      use: { ...devices['Desktop Safari'] , trace: 'on', headless: false, launchOptions: { args: ['--window-size=1920,1080'] },viewport: { width: 1920, height: 1080 } },
       testMatch: ['tests/confirm-store-test.spec.js']
+    },
+    {
+      name: 'accountE',
+      use: { ...devices['Desktop Safari'] , trace: 'on', headless: false, launchOptions: { args: ['--window-size=1920,1080'] },viewport: { width: 1920, height: 1080 } },
+      testMatch: ['tests/test-1.spec.js']
     },
 
 
