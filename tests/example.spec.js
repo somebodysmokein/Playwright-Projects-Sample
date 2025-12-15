@@ -1,6 +1,8 @@
 // @ts-check
 import { expect } from '@playwright/test';
-import { test } from './test-fixtures';
+
+import fixtures from './test-fixtures.js';
+const { test } = fixtures;
 
 test.describe('Playwright Demo Tests', () => {
 

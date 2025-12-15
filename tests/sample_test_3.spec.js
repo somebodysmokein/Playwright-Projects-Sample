@@ -1,5 +1,6 @@
 import  {expect } from "@playwright/test";
-import test from './test-fixtures.js';
+import fixtures from './test-fixtures.js';
+const { test } = fixtures;
 import fs from 'fs/promises';
 import path from 'path';
 

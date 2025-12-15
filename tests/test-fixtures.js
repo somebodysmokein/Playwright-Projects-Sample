@@ -1,4 +1,5 @@
 const { chromium } = require('playwright');
+const base = require("@playwright/test");
 
 const updateSessionStatus = async (page, testInfo) => {
   if (!page) { return; }

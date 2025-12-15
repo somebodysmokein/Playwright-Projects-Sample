@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
-import { test } from './test-fixtures';
+import fixtures from './test-fixtures.js';
+const { test } = fixtures;
 
 test('test libby app', async ({ page }) => {
   await page.goto('https://libbyapp.com/interview/welcome#doYouHaveACard');
